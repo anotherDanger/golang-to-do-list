@@ -32,3 +32,15 @@ func ShowTodos() {
 		fmt.Println(todo.id, todo.todo, complete)
 	}
 }
+
+func UpdateTodos(id int) {
+	if len(lists) == 0 {
+		println("Kosong")
+		return
+	}
+	for i := range lists {
+		if lists[i].id == id {
+			lists[i].complete = true
+		}
+	}
+}
