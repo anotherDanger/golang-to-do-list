@@ -44,3 +44,13 @@ func UpdateTodos(id int) {
 		}
 	}
 }
+
+func DeleteTodos(id int) {
+	for i, task := range lists {
+		if task.id == id {
+			lists = append(lists[:i], lists[i+1:]...)
+			return
+		}
+	}
+	fmt.Print("Kosong")
+}

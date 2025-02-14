@@ -10,6 +10,7 @@ func main() {
 		println("1. Menambahkan todo")
 		println("2. Lihat daftar todo")
 		println("3. Update todo")
+		println("4. Hapus todo")
 		var choice int
 		fmt.Scan(&choice)
 
@@ -31,6 +32,13 @@ func main() {
 			var id int
 			fmt.Scan(&id)
 			list.UpdateTodos(id)
+			fmt.Println()
+		case 4:
+			fmt.Println("Hapus")
+			fmt.Print("Masukkan id: ")
+			var id int
+			fmt.Scan(&id)
+			list.DeleteTodos(id)
 			fmt.Println()
 		}
 
